@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logica de programacion 4</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos para el cuerpo */
+    body {
+      height: 100vh; /* Altura del cuerpo igual al 100% de la ventana */
+      margin: 0;
+      background-color: #000; /* Color de fondo negro */
+    }
+
+    /* Estilos para el contenedor */
+    .container {
+      text-align: center; /* Alineación del texto al centro */
+      color: white; /* Color del texto */
+      position: absolute; /* Posición absoluta */
+      top: 50%; /* Desplazar hacia arriba un 50% desde la parte superior */
+      left: 50%; /* Desplazar hacia la derecha un 50% desde el borde izquierdo */
+      transform: translate(-50%, -50%); /* Traslación hacia atrás un 50% del ancho y un 50% de la altura */
+    }
+
+    /* Personalización del botón */
+    .btn-pink {
+      background: linear-gradient(to right, #ff00cc, #ff99cc); /* Degradado de rosa */
+      border-color: #ff00cc; /* Color del borde */
+      color: #ffffff; /* Color del texto */
+    }
+
+    /* Cambiar el color del botón al pasar el cursor sobre él */
+    .btn-pink:hover {
+      background: linear-gradient(to right, #ff99cc, #ff00cc); /* Degradado inverso al pasar el cursor */
+      border-color: #ff00cc; /* Color del borde */
+      color: #ffffff; /* Color del texto */
+    }
+
+    /* Estilos para el título */
+    h1 {
+      font-family: 'Manrope', sans-serif; /* Fuente Manrope */
+      color: #462493; /* Color del texto */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="container">
+    <h1>Serie de Fibonacci</h1>
+    <form id="formulario" class="mb-3">
+      <div class="mb-3">
+        <label for="numero" class="form-label">Número:</label>
+        <input type="number" class="form-control" id="numero" name="numero" min="1">
+      </div>
+      <button type="button" class="btn btn-pink btn-block" onclick="calcularFibonacci()">Calcular</button>
+    </form>
+    <div id="resultado" class="text-center"></div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
